@@ -32,19 +32,19 @@ VALUES
 INSERT INTO [TABELA DE PRODUTOS]
 VALUES
 (
-'1040107','Light - 350 ml - Mel‚ncia','Garrafa','350 ml','Mel‚ncia',4.56
+'1040107','Light - 350 ml - Mel√¢ncia','Garrafa','350 ml','Mel√¢ncia',4.56
 ),(
 '1037797','Clean - 2 Litros - Laranja','PET','2 lITROS','Laranja',16.01
 ),(
-'1000889','Linha Citros - 1 Litro - Lim„o','Garrafa','1 Litro','Lim„o',7.50
+'1000889','Linha Citros - 1 Litro - Lim√£o','Garrafa','1 Litro','Lim√£o',7.50
 ),(
-'1088126','Frescor do Ver„o - 350 ml - Lim„o','Garrafa','500 ml','Limao',3.00
+'1088126','Frescor do Ver√£o - 350 ml - Lim√£o','Garrafa','500 ml','Limao',3.00
 );
 
 INSERT INTO [TABELA DE VENDEDORES]
 ([MATRICULA], [NOME], [COMISSAO])
 VALUES
-('00235','M·rcio Almeida Silva',0.08);
+('00235','M√°rcio Almeida Silva',0.08);
 
    INSERT INTO [TABELA DE PRODUTOS]
    ([CODIGO DO PRODUTO],[NOME DO PRODUTO],[EMBALAGEM],[TAMANHO],[SABOR],[PRECO DE LISTA])
@@ -56,7 +56,7 @@ SELECT * FROM [TABELA DE CLIENTES];
 SELECT * FROM [TABELA DE VENDEDORES];
 SELECT * FROM [TABELA DE FUNCIONARIOS];
 
---ManutenÁ„o dos dados nas tabelas;
+--Manuten√ß√£o dos dados nas tabelas;
 
 INSERT INTO [TABELA DE VENDEDORES]
 VALUES
@@ -77,14 +77,52 @@ VALUES
 
 INSERT INTO [TABELA DE CLIENTES] 
 VALUES 
-    ('00384393431', 'Jo„o da Silva', 'Rua Projetada A1', 'Numero 233', 'Copacabana', 'Rio de janeiro', 'RJ', '20000000', '1965-03-21', 57, 'M', 20000, 30000.30, 1);
+    ('00384393431', 'Jo√£o da Silva', 'Rua Projetada A1', 'Numero 233', 'Copacabana', 'Rio de janeiro', 'RJ', '20000000', '1965-03-21', 57, 'M', 20000, 30000.30, 1);
 
 INSERT INTO [TABELA DE FUNCIONARIOS]
 ([NOME], 
 [MATRICULA],
 [CIDADE],
-[PERCENTUAL COMISS√O],
+[PERCENTUAL COMISS√ÉO],
 [DATA INICIO],
 [TEM DEPENDENTE])
 VALUES
-('Alberto de S· Verneck','00239','S„o Paulo', 0.08,'2020-06-05',1);
+('Alberto de S√° Verneck','00239','S√£o Paulo', 0.08,'2020-06-05',1);
+---Altera√ßao do campo logico
+
+INSERT INTO [TABELA DE CLIENTES] 
+VALUES 
+    ('00384393555', 'Maria Clara', 'Rua Projetada A1', 'Numero 233', 'Copacabana', 'Rio de janeiro', 'RJ', '20000000', '1975-03-21', 47, 'F', 20000, 30000.30, 'TRUE');
+INSERT INTO [TABELA DE CLIENTES] 
+VALUES 
+    ('00384393666', 'M√°rcia Pereira', 'Rua Projetada A1', 'Numero 233', 'Copacabana', 'Rio de janeiro', 'RJ', '20000000', '1975-03-21', 47, 'F', 20000, 30000.30, 'FALSE');
+
+INSERT INTO [TABELA DE FUNCIONARIOS]
+([NOME], 
+[MATRICULA],
+[CIDADE],
+[PERCENTUAL COMISS√ÉO],
+[DATA INICIO],
+[TEM DEPENDENTE])
+VALUES
+('Marcela Almeida','00240','Rio de Janeiro', 0.07,'2021-01-12','FALSE');
+
+   INSERT INTO [TABELA DE PRODUTOS]
+   VALUES
+   ('1078680','Frescor do Ver√£o - 470 ml - Manga'
+   ,'Garrafa','470 ml'
+   ,'Manga',7);
+
+INSERT INTO [TABELA DE FUNCIONARIOS]
+([NOME], 
+[MATRICULA],
+[CIDADE],
+[PERCENTUAL COMISS√ÉO],
+[DATA INICIO],
+[TEM DEPENDENTE])
+VALUES
+('Jo√£o da Silva','00241','S√£o Paulo',0.06,'2022-12-01','TRUE'),
+('Carolina Soares','00242','Rio de Janeiro',0.07,'2020-03-13','TRUE'),
+('Juliana Marques','00243','S√£o Paulo',0.09,'2018-11-14','FALSE'),
+('Pedro Gomes','00244','S√£o Paulo',0.08,'2019-01-20','FALSE'),
+('Christina Rodrigues','00245','Rio de Janeiro',0.07,'2021-02-13','TRUE');
